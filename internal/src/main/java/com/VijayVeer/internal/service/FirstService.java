@@ -10,14 +10,14 @@ import org.json.JSONObject;
 @Service
 public class FirstService {
     public RouteInfo getRouteData(String origin, String destination, Model model) {
-//        String apiKey = "AIzaSyBoQ6FN55NtAUucLWKMDW5s1CricaJ8UdE";
+//        String apiKey = "My API Key";
 //        String url = "https://maps.googleapis.com/maps/api/directions/json?origin=" + origin +
 //                "&destination=" + destination + "&key=" + apiKey;
 //        return restTemplate.getForObject(url, String.class);
 
         final RestTemplate restTemplate = new RestTemplate();
 
-        String apiKey = "AIzaSyBoQ6FN55NtAUucLWKMDW5s1CricaJ8UdE";
+        String apiKey = "My API Key";
         String url = "https://maps.googleapis.com/maps/api/directions/json?origin=" + origin +
                 "&destination=" + destination + "&key=" + apiKey;
 
@@ -35,5 +35,3 @@ public class FirstService {
         return new RouteInfo(distance, duration);
     }
 }
-
-//https://maps.googleapis.com/maps/api/directions/json?origin='Bangali Square' &destination= 'Rau Square' &key= 'AIzaSyBoQ6FN55NtAUucLWKMDW5s1CricaJ8UdE'
